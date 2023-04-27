@@ -1,2 +1,2 @@
 # Laundry
-Simple Web Application To Manage Business Processes
+Simple Laundry Web Application To Manage Business Processes
