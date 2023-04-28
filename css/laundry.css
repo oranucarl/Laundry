@@ -1,0 +1,150 @@
+    <style>
+		*{margin:0;}
+		   #container{
+		               width:100%;
+					   height:400%;}
+
+			html {scroll-behavior: smooth;}		   
+
+			#pic1{     width:100%;
+			           height:100%;
+			           background-image: url("../images/banner1.jpg");
+			           transition:width 3s;
+			           animation-name:example;
+			           animation-duration: 12s;
+			           animation-iteration-count:infinite;
+			           animation-delay:2s;
+					   transition-property: opacity;
+					   transition-duration: 1s;
+					   transition-timing-function: ease-in-out;
+			        } 
+
+			@keyframes example{ 
+				    0% {background-image: url("../images/banner1.jpg");}
+				   20% {background-image: url("../images/banner3.jpg");}
+				   40% {background-image: url("../images/banner2.jpg");}
+				   60% {background-image: url("../images/banner4.jpg");}
+				   80% {background-image: url("../images/banner5.jpg");}
+				  100% {background-image: url("../images/banner6.png");}
+
+                    }
+		   
+		   #header{    width:100%; 
+		               height:12%; 
+					   color:black; 
+					   background-color:#0d4b581f;
+					   position:fixed;
+					   padding:2px;
+					   margin-right:0px;
+					   overflow:hidden;
+			}
+
+			#banner div#nav2 a{
+				               display:inline-block;;
+							   width:150px;
+							   height:40%;
+		    }
+		   
+		   ol{
+			text-align:right;
+			margin-right:2%;
+		   }
+		   
+		   li{
+		    display:inline;
+            text-decoration:none;background-color:#ffffff;border:1px;margin-inline:0.1%; padding: 0.1%;
+		   }
+                  	 
+		   
+		   .order{     
+			text-align:center;
+		    position:absolute;
+		    bottom:20%;
+		    right:36%;
+		    }
+		   
+		   #banner{     position:;
+		                height:100%}
+		   
+		   #firstpage{  height:25%; 
+		                width:100%;
+						 overflow: hiden;}
+		  .boss{height:28%;
+		      width:20%;}
+
+		.service-image {
+		padding-left: 1%;
+		transition: all 0.3s ease;
+		}
+		
+		.service-image:hover {
+		transform: translateX(50px);
+		}
+			  
+		  
+		   #secondpage{ height:25%;
+		                width:100%;
+						background-color:rgb(104, 63, 104);}
+
+
+			.barni{
+				border: 1px solid black;
+				color:grey;
+				background-color:black; 
+				margin:auto;
+				padding: 0.2%;
+			}
+		   
+		   #thirdpage{  height:25%;
+		                width:100%;
+						background-color:orange;}
+		    h2{ padding:8px; }
+
+			#ser{text-align:center;
+
+
+			}
+
+
+		   #fourthpage{ height:25%;
+		                width:100%;
+						background-color:rgb(116, 163, 116);}
+		  
+   		   #logo img{width:42px}
+		    a{text-decoration:none; color:black;}
+		    a:hover{color:cyan;}
+
+		   #forthpageblog{display:flex;
+		                  width:100%;
+		                  height:75%; 
+		                  margin:auto;
+						  padding: 10px;
+			
+						 }
+						 
+
+		   form {text-align:center;background-color:rgb(83, 142, 83);
+						 height:80%;
+						 width:50%;
+						margin:auto;}
+
+           .font{       width: 30%; 
+           	            height:150px; 
+           	            font-size: 16px;
+           	            background-color:white; 
+           	            margin:12px; 
+           	            padding:15Spx;}
+
+           .fa-facebook-square{ width:20%; background-color:; color:blue; font-size:2em !important;}
+
+           .fa-twitter-square{ width:20%; background-color:; color:darkblue;font-size:2em !important;}
+
+           .fa-comments-o{ width:20%; background-color:; color:brown;font-size:2em !important;}
+
+           
+           #contact{color:white;}
+
+		   #fourthpagefooter{width:100%;
+		                   height:25%;}
+		   
+	</style>
