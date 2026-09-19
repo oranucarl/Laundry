@@ -200,7 +200,7 @@ export default function Hero() {
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/15 rounded-3xl p-6 shadow-2xl">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-white/60 text-xs uppercase tracking-widest">
-                    Order #CL-2481
+                    Order #PP-2481
                   </span>
                   <span className="flex items-center gap-1.5 text-accent-green text-xs font-semibold">
                     <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />

@@ -1,4 +1,4 @@
-# Carlson's Laundry
+# Presspoint Laundry
 
 A modern, responsive laundry service website built with React, Tailwind CSS, and Framer Motion.
 

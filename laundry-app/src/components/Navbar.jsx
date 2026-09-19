@@ -63,7 +63,7 @@ export default function Navbar() {
           >
             <Waves className={`w-8 h-8 ${solid ? 'text-primary-600' : 'text-white'}`} />
             <span className={`text-lg sm:text-xl font-bold font-display ${solid ? 'text-secondary-900' : 'text-white'}`}>
-              Carlson&rsquo;s Laundry
+              Presspoint Laundry
             </span>
           </motion.a>
 

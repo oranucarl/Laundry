@@ -7,14 +7,14 @@
  */
 
 export const business = {
-  name: "Carlson's Laundry",
+  name: 'Presspoint Laundry',
   tagline: 'Premium laundry & traditional garment care',
   foundedYear: 2008, // TODO:REAL — hero/about derive "years of service" from this
 
   phone: '+2348001234567',          // TODO:REAL — digits only, E.164, used for tel:
   phoneDisplay: '+234 800 123 4567', // TODO:REAL
   whatsapp: '2348001234567',         // TODO:REAL — no +, used for wa.me links
-  email: 'info@carlsonslaundry.com', // TODO:REAL
+  email: 'info@presspointlaundry.com', // TODO:REAL
 
   address: {
     street: '123 Clean Street',      // TODO:REAL

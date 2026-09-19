@@ -59,7 +59,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-gray-600 text-lg leading-relaxed mb-8"
             >
-              Carlson's Laundry is a trusted and reliable nationwide laundry service
+              Presspoint Laundry is a trusted and reliable nationwide laundry service
               established since 2008. We offer comprehensive services including
               door-to-door pickup, contract services for businesses, and convenient
               retail locations. Our commitment to quality ensures your garments
