@@ -2,12 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/laundry-148636_1280.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlson's Laundry - Professional Laundry Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/laundry-148636_1280.png" />
+    <meta name="theme-color" content="#0891b2" />
+
+    <title>Carlson's Laundry | Agbada, Lace &amp; Everyday Laundry in Lagos</title>
+    <meta
+      name="description"
+      content="Premium laundry and dry cleaning in Lagos. Specialist care for agbada, senator, lace and aso-ebi, plus everyday wear. Free pickup and delivery, 24-hour express available."
+    />
+    <link rel="canonical" href="https://oranucarl.github.io/Laundry/" />
+
+    <!-- Open Graph: link previews on WhatsApp, Facebook, LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Carlson's Laundry" />
+    <meta property="og:title" content="Carlson's Laundry | Traditional &amp; Everyday Garment Care" />
+    <meta
+      property="og:description"
+      content="Specialist care for agbada, senator, lace and aso-ebi — plus everyday wear. Free pickup and delivery across Lagos."
+    />
+    <meta property="og:url" content="https://oranucarl.github.io/Laundry/" />
+    <meta property="og:image" content="https://oranucarl.github.io/Laundry/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- Twitter/X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Carlson's Laundry | Traditional &amp; Everyday Garment Care" />
+    <meta
+      name="twitter:description"
+      content="Specialist care for agbada, senator, lace and aso-ebi — plus everyday wear. Free pickup and delivery across Lagos."
+    />
+    <meta name="twitter:image" content="https://oranucarl.github.io/Laundry/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data: feeds Google rich results and Maps -->
+    <!-- TODO:REAL — update address, phone, geo and openingHours to match src/data/business.js -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DryCleaningOrLaundry",
+        "name": "Carlson's Laundry",
+        "description": "Premium laundry and dry cleaning in Lagos, specialising in traditional Nigerian garments alongside everyday wear.",
+        "url": "https://oranucarl.github.io/Laundry/",
+        "telephone": "+2348001234567",
+        "email": "info@carlsonslaundry.com",
+        "priceRange": "₦₦",
+        "image": "https://oranucarl.github.io/Laundry/og-image.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Clean Street",
+          "addressLocality": "Victoria Island, Lagos",
+          "addressRegion": "Lagos",
+          "addressCountry": "NG"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 6.4281, "longitude": 3.4219 },
+        "areaServed": { "@type": "City", "name": "Lagos" },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "07:00", "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday", "opens": "08:00", "closes": "20:00"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oranucarl.github.io/Laundry/sitemap.xml
