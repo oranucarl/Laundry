@@ -13,6 +13,7 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import MobileCTA from './components/MobileCTA'
+import Assistant from './components/Assistant'
 
 // Leaflet is ~45KB gzipped, so keep it out of the first paint.
 const Coverage = lazy(() => import('./components/Coverage'))
@@ -54,6 +55,7 @@ function App() {
         </main>
         <Footer />
         <MobileCTA />
+        <Assistant />
       </div>
     </OrderProvider>
   )

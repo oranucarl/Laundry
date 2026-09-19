@@ -8,6 +8,7 @@ import { spring } from '../lib/motion'
 /**
  * Sticky call/WhatsApp bar for phones. Appears once the hero is behind you,
  * and steps aside when the order estimator takes over the bottom of the screen.
+ * On larger screens the chat assistant covers this ground instead.
  */
 export default function MobileCTA() {
   const [visible, setVisible] = useState(false)
@@ -54,30 +55,6 @@ export default function MobileCTA() {
         )}
       </AnimatePresence>
 
-      {/* Tablet & up: floating action button */}
-      <AnimatePresence>
-        {show && (
-          <motion.a
-            href={whatsappLink(`Hi ${business.name}, I'd like to book a pickup.`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat with us on WhatsApp"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.94 }}
-            transition={spring}
-            className="hidden sm:flex fixed bottom-6 right-6 z-40 w-16 h-16 rounded-2xl bg-accent-green text-white shadow-2xl shadow-accent-green/30 items-center justify-center group"
-          >
-            <span className="absolute inset-0 rounded-2xl bg-accent-green animate-ping opacity-20" />
-            <MessageCircle className="w-7 h-7 relative" />
-            <span className="absolute right-full mr-3 whitespace-nowrap bg-secondary-900 text-white text-sm font-medium px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-              Chat with us
-            </span>
-          </motion.a>
-        )}
-      </AnimatePresence>
     </>
   )
 }
