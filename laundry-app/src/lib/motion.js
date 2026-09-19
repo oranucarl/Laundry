@@ -24,7 +24,7 @@ export const stagger = (staggerChildren = 0.08, delayChildren = 0) => ({
   visible: { transition: { staggerChildren, delayChildren } },
 })
 
-/** Standard viewport config — animate once, trigger slightly before entry. */
+/** Standard viewport config: animate once, trigger slightly before entry. */
 export const inView = { once: true, margin: '-80px' }
 
 /** Spring used for hover lifts and the estimator drawer. */

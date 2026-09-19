@@ -99,7 +99,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Order count — appears once the estimator has items */}
+            {/* Order count, appears once the estimator has items */}
             <AnimatePresence>
               {itemCount > 0 && (
                 <motion.button

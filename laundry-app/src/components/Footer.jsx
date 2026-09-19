@@ -54,11 +54,11 @@ export default function Footer() {
               <span className="text-xl font-bold font-display">{business.name}</span>
             </a>
             <p className="text-gray-400 mb-6 max-w-sm leading-relaxed">
-              Specialist care for agbada, lace, senator and aso-ebi — alongside
+              Specialist care for agbada, lace, senator and aso-ebi, alongside
               everyday wear and household linen. {yearsOfService} years serving Lagos.
             </p>
 
-            {/* Contact details — all tappable */}
+            {/* Contact details, all tappable */}
             <ul className="space-y-3 mb-6 text-sm">
               <li>
                 <a href={`tel:${business.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-primary-400 transition-colors focus-ring-dark">
@@ -144,7 +144,7 @@ export default function Footer() {
             <div key={h.days} className="text-sm">
               <div className="text-gray-300 font-medium">{h.days}</div>
               <div className="text-gray-500">
-                {h.close ? `${h.open} – ${h.close}` : h.open}
+                {h.close ? `${h.open} to ${h.close}` : h.open}
               </div>
             </div>
           ))}

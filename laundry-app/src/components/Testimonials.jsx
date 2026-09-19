@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 import { fadeUp, inView, EASE, spring } from '../lib/motion'
 
-// TODO:REAL — replace with genuine reviews. Never publish invented testimonials.
+// TODO:REAL: replace with genuine reviews. Never publish invented testimonials.
 const testimonials = [
   {
     name: 'Adaeze N.',
@@ -37,7 +37,7 @@ const testimonials = [
     role: 'Surulere',
     rating: 5,
     quote:
-      'My agbada came back with the embroidery still crisp — no shine, no flattening. That is the part everyone else gets wrong.',
+      'My agbada came back with the embroidery still crisp. No shine, no flattening. That is the part everyone else gets wrong.',
     initials: 'FA',
     tint: 'from-emerald-500 to-teal-600',
   },

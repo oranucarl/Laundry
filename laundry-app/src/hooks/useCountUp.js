@@ -19,7 +19,7 @@ export default function useCountUp(target, { duration = 1800, decimals = 0 } = {
     const start = performance.now()
     const tick = (now) => {
       const p = Math.min((now - start) / duration, 1)
-      // easeOutExpo — fast start, gentle settle
+      // easeOutExpo: fast start, gentle settle
       const eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p)
       setValue(target * eased)
       if (p < 1) frame = requestAnimationFrame(tick)

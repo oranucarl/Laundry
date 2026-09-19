@@ -4,11 +4,11 @@ import { Plus, MessageCircle } from 'lucide-react'
 import { whatsappLink, business } from '../data/business'
 import { fadeUp, stagger, inView, EASE } from '../lib/motion'
 
-// TODO:REAL — confirm these answers match your actual policies.
+// TODO:REAL: confirm these answers match your actual policies.
 const faqs = [
   {
     q: 'How long does a normal order take?',
-    a: 'Standard service is 48 hours from collection. Express turns your order around in 24 hours for a 40% surcharge. Traditional pieces with heavy beading may need an extra day — we will always tell you before we start.',
+    a: 'Standard service is 4 days from collection. Express turns your order around in 24 hours for a 40% surcharge. Traditional pieces with heavy beading may need an extra day, and we will always tell you before we start.',
   },
   {
     q: 'Do you really handle agbada, lace and aso-oke?',
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'How do I pay?',
-    a: 'Bank transfer, card on delivery, or USSD. You inspect your order before you pay — if something is not right, we take it back and redo it at no charge.',
+    a: 'Bank transfer, card on delivery, or USSD. You inspect your order before you pay. If something is not right, we take it back and redo it at no charge.',
   },
   {
     q: 'What if a garment is damaged or lost?',
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Do you offer contracts for hotels and offices?',
-    a: 'We do — scheduled daily or weekly collections, bulk rates, dedicated account manager and consolidated monthly invoicing. Get in touch and we will build a rate card around your volume.',
+    a: 'We do. Scheduled daily or weekly collections, bulk rates, dedicated account manager and consolidated monthly invoicing. Get in touch and we will build a rate card around your volume.',
   },
 ]
 
@@ -125,7 +125,7 @@ export default function FAQ() {
             Still have a question?
           </h3>
           <p className="text-gray-600 mb-6">
-            Message us on WhatsApp — we usually reply within a few minutes.
+            Message us on WhatsApp. We usually reply within a few minutes.
           </p>
           <a
             href={whatsappLink(`Hi ${business.name}, I have a question about your service.`)}

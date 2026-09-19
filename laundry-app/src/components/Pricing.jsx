@@ -17,7 +17,7 @@ export default function Pricing() {
   const orderMessage = () => {
     const speedLabel = turnarounds.find((t) => t.id === speed)
     const body = lines
-      .map((l) => `• ${l.qty} × ${l.name} — ${formatNaira(l.lineTotal)}`)
+      .map((l) => `• ${l.qty} × ${l.name}: ${formatNaira(l.lineTotal)}`)
       .join('\n')
     return (
       `Hello ${business.name}, I'd like to place an order.\n\n` +
@@ -44,13 +44,13 @@ export default function Pricing() {
           className="text-center mb-12"
         >
           <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-            Transparent Pricing
+            Best Pricing
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mt-2 mb-4">
             Every Garment, Priced Up Front
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            From agbada and lace to everyday shirts — pick your pieces and watch
+            From agbada and lace to everyday shirts. Pick your pieces and watch
             your total build. No hidden charges, no surprises at delivery.
           </p>
         </motion.div>
@@ -268,9 +268,9 @@ export default function Pricing() {
           className="text-center text-sm text-gray-500 mt-10"
         >
           Free pickup &amp; delivery on orders over {formatNaira(FREE_DELIVERY_OVER)}.
-          Bulk and contract rates available — {' '}
+          Bulk and contract rates available.{' '}
           <a href="#contact" className="text-primary-600 font-semibold hover:underline">
-            ask for a quote
+            Ask for a quote
           </a>.
         </motion.p>
       </div>

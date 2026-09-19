@@ -37,7 +37,7 @@ export default function Contact() {
     { icon: Mail, label: 'Email', value: business.email, href: `mailto:${business.email}` },
     {
       icon: Clock, label: 'Hours',
-      value: business.hours.map((h) => (h.close ? `${h.days}: ${h.open}–${h.close}` : `${h.days}: ${h.open}`)).join(' · '),
+      value: business.hours.map((h) => (h.close ? `${h.days}: ${h.open} to ${h.close}` : `${h.days}: ${h.open}`)).join(' · '),
     },
   ]
 
@@ -57,7 +57,7 @@ export default function Contact() {
     itemCount === 0
       ? 'No items selected in the estimator.'
       : lines.map((l) => `${l.qty} x ${l.name} (${formatNaira(l.lineTotal)})`).join(', ') +
-        ` — estimated total ${formatNaira(total)}`
+        `. Estimated total ${formatNaira(total)}`
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -93,14 +93,14 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: business.formAccessKey,
-          subject: `New order enquiry — ${formData.firstName} ${formData.lastName}`,
+          subject: `New order enquiry from ${formData.firstName} ${formData.lastName}`,
           from_name: `${business.name} website`,
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           phone: formData.phone,
           service: formData.service,
           order_summary: cartSummary(),
-          message: formData.message || '—',
+          message: formData.message || 'None',
         }),
       })
       if (!res.ok) throw new Error(`Request failed: ${res.status}`)
@@ -207,7 +207,7 @@ export default function Contact() {
                 <li>• 24-hour express turnaround available</li>
                 <li>• Free pickup &amp; delivery across Lagos</li>
                 <li>• Hand finishing for lace, beading and embroidery</li>
-                <li>• Inspect before you pay — redo at no charge</li>
+                <li>• Inspect before you pay, redo at no charge</li>
               </ul>
             </motion.div>
           </motion.div>
@@ -257,7 +257,7 @@ export default function Contact() {
                 )}
               </AnimatePresence>
 
-              {/* honeypot — hidden from people, irresistible to bots */}
+              {/* honeypot: hidden from people, irresistible to bots */}
               <input
                 type="text"
                 name="company"
@@ -351,8 +351,8 @@ export default function Contact() {
                 }`}
               >
                 {status === 'sending' && (<><Loader2 className="w-5 h-5 animate-spin" />Sending…</>)}
-                {status === 'sent' && (<><CheckCircle className="w-5 h-5" />Order sent — we&rsquo;ll be in touch</>)}
-                {status === 'error' && (<><AlertCircle className="w-5 h-5" />Something went wrong — try again</>)}
+                {status === 'sent' && (<><CheckCircle className="w-5 h-5" />Order sent, we&rsquo;ll be in touch</>)}
+                {status === 'error' && (<><AlertCircle className="w-5 h-5" />Something went wrong, try again</>)}
                 {status === 'idle' && (<><Send className="w-5 h-5" />Submit Order</>)}
               </motion.button>
 

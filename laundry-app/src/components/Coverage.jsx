@@ -120,7 +120,7 @@ export default function Coverage() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Drop off at any branch, or let us come to you. Tap a location to see
-            it on the map — the shaded rings show our free pickup radius.
+            it on the map. The shaded rings show our free pickup radius.
           </p>
         </motion.div>
 
@@ -248,8 +248,7 @@ export default function Coverage() {
             Outside these areas?{' '}
             <a href="#contact" className="text-primary-600 font-semibold hover:underline">
               Contact us
-            </a>{' '}
-            — we still deliver nationwide by courier.
+            </a>. We still deliver nationwide by courier.
           </p>
         </motion.div>
       </div>

@@ -7,7 +7,7 @@ const steps = [
   {
     icon: CalendarCheck,
     title: 'Book a pickup',
-    body: 'Choose your garments and a time that suits you — on WhatsApp, by phone, or right here on the site.',
+    body: 'Choose your garments and a time that suits you, on WhatsApp, by phone, or right here on the site.',
   },
   {
     icon: Truck,
@@ -17,12 +17,12 @@ const steps = [
   {
     icon: Sparkles,
     title: 'Expert care',
-    body: 'Each fabric is sorted and treated by hand — lace, aso-oke and embroidery never share a cycle with everyday wash.',
+    body: 'Each fabric is sorted and treated by hand. Lace, aso-oke and embroidery never share a cycle with everyday wash.',
   },
   {
     icon: PackageCheck,
     title: 'Delivered fresh',
-    body: 'Pressed, wrapped and back at your door within 24 or 48 hours. You approve before you pay.',
+    body: 'Pressed, wrapped and back at your door in 4 days, or within 24 hours on express. You approve before you pay.',
   },
 ]
 
@@ -61,7 +61,7 @@ export default function HowItWorks() {
         </motion.div>
 
         <div ref={trackRef} className="relative">
-          {/* connecting rail — horizontal on desktop, vertical on mobile */}
+          {/* connecting rail, horizontal on desktop, vertical on mobile */}
           <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-white/10">
             <motion.div
               style={{ scaleX: reduce ? 1 : lineScale }}

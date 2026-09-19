@@ -14,7 +14,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import MobileCTA from './components/MobileCTA'
 
-// Leaflet is ~45KB gzipped — keep it out of the first paint.
+// Leaflet is ~45KB gzipped, so keep it out of the first paint.
 const Coverage = lazy(() => import('./components/Coverage'))
 
 function App() {

@@ -1,15 +1,15 @@
 /**
  * Garment catalogue driving the Pricing section and the live estimator.
- * Prices are in naira, for a single garment, standard 48-hour turnaround.
+ * Prices are in naira, for a single garment, on standard 4 day turnaround.
  *
- * Photography: Pexels (pexels.com/license) — free for commercial use, no
+ * Photography: Pexels (pexels.com/license), free for commercial use, no
  * attribution required. Files live in public/images/garments/.
  */
-// TODO:REAL — confirm every price against your actual rate card.
+// TODO:REAL: confirm every price against your actual rate card.
 
 export const groups = [
-  { id: 'men', label: "Traditional — Men" },
-  { id: 'women', label: 'Traditional — Women' },
+  { id: 'men', label: 'Men' },
+  { id: 'women', label: 'Women' },
   { id: 'everyday', label: 'Everyday Wear' },
   { id: 'home', label: 'Household' },
 ]
@@ -102,9 +102,9 @@ export const catalogue = [
   },
 ]
 
-/** Express service halves the turnaround and adds a surcharge. */
+/** Express cuts the turnaround to a single day and adds a surcharge. */
 export const turnarounds = [
-  { id: 'standard', label: 'Standard', detail: '48 hours', multiplier: 1 },
+  { id: 'standard', label: 'Standard', detail: '4 days', multiplier: 1 },
   { id: 'express', label: 'Express', detail: '24 hours', multiplier: 1.4 },
 ]
 
