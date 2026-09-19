@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Sparkles, Play, Pause, Truck, Clock3, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Play, Pause, Truck, Clock3, ShieldCheck } from 'lucide-react'
 import useCountUp from '../hooks/useCountUp'
-import { business, yearsOfService } from '../data/business'
+import { yearsOfService } from '../data/business'
 import { EASE, spring } from '../lib/motion'
 
 const B = import.meta.env.BASE_URL
@@ -89,20 +89,8 @@ export default function Hero() {
         style={{ y: reduce ? 0 : contentY, opacity: reduce ? 1 : contentOpacity }}
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-3xl">
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, ease: EASE }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/10"
-            >
-              <Sparkles className="w-4 h-4 text-primary-400" />
-              <span className="text-primary-200 text-sm font-medium">
-                Specialists in traditional garment care
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -184,77 +172,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* ── Live order card (replaces the old placeholder icon) ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 40, rotate: -3 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 1.1, duration: 0.9, ease: EASE }}
-            className="hidden lg:flex justify-center"
-          >
-            <motion.div
-              animate={reduce ? undefined : { y: [0, -14, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative w-full max-w-sm"
-            >
-              <div className="absolute -inset-8 bg-primary-500/25 blur-3xl rounded-full" />
-              <div className="relative bg-white/10 backdrop-blur-xl border border-white/15 rounded-3xl p-6 shadow-2xl">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-white/60 text-xs uppercase tracking-widest">
-                    Order #PP-2481
-                  </span>
-                  <span className="flex items-center gap-1.5 text-accent-green text-xs font-semibold">
-                    <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-                    In transit
-                  </span>
-                </div>
-
-                {[
-                  { label: 'Collected', time: 'Today, 8:12 AM', done: true },
-                  { label: 'Cleaning & pressing', time: 'Today, 11:40 AM', done: true },
-                  { label: 'Quality check', time: 'In progress', done: false },
-                  { label: 'Out for delivery', time: 'Tomorrow, 9:00 AM', done: false },
-                ].map((step, i) => (
-                  <motion.div
-                    key={step.label}
-                    initial={{ opacity: 0, x: -14 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.5 + i * 0.16 }}
-                    className="flex gap-4 pb-5 last:pb-0 relative"
-                  >
-                    {i < 3 && (
-                      <span className="absolute left-[11px] top-6 bottom-0 w-px bg-white/15" />
-                    )}
-                    <span
-                      className={`relative z-10 w-6 h-6 rounded-full shrink-0 border-2 flex items-center justify-center ${
-                        step.done
-                          ? 'bg-accent-green border-accent-green'
-                          : 'bg-white/10 border-white/30'
-                      }`}
-                    >
-                      {step.done && (
-                        <svg viewBox="0 0 12 12" className="w-3 h-3" aria-hidden="true">
-                          <path d="M2 6l3 3 5-6" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      )}
-                    </span>
-                    <div className="min-w-0">
-                      <div className={`text-sm font-semibold ${step.done ? 'text-white' : 'text-white/50'}`}>
-                        {step.label}
-                      </div>
-                      <div className="text-xs text-white/40">{step.time}</div>
-                    </div>
-                  </motion.div>
-                ))}
-
-                <div className="mt-2 pt-5 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-white/60 text-sm">3 items · Express</span>
-                  <span className="text-white font-bold">
-                    {business.currency}18,200
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
         </div>
       </motion.div>
 

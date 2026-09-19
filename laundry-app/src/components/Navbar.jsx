@@ -137,9 +137,9 @@ export default function Navbar() {
               whileHover={reduce ? undefined : { scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               transition={spring}
-              className="hidden sm:block bg-accent-green hover:bg-accent-greenDark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors focus-ring"
+              className="hidden md:block bg-accent-green hover:bg-accent-greenDark text-white px-5 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap transition-colors focus-ring"
             >
-              Order now
+              Request Laundry Pickup
             </motion.a>
 
             {/* Mobile toggle */}
@@ -196,7 +196,7 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); go('#pricing') }}
                   className="flex-1 bg-accent-green text-white text-center py-3 rounded-xl font-semibold focus-ring"
                 >
-                  Order now
+                  Request Laundry Pickup
                 </a>
               </div>
             </div>

@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { motion, AnimatePresence, LayoutGroup, useReducedMotion } from 'framer-motion'
 import { Plus, Minus, Zap, Clock, ShoppingBag, MessageCircle, X, Sparkles } from 'lucide-react'
-import GarmentArt from './art/GarmentArt'
 import { catalogue, groups, turnarounds, formatNaira } from '../data/catalogue'
 import { whatsappLink, business } from '../data/business'
 import { useOrder, FREE_DELIVERY_OVER } from '../context/OrderContext'
@@ -162,17 +161,21 @@ export default function Pricing() {
                     </span>
                   )}
 
-                  {/* Artwork */}
-                  <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
-                    <motion.div
-                      className="h-full w-full py-4"
-                      whileHover={reduce ? undefined : { scale: 1.08, rotate: -2 }}
-                      transition={{ duration: 0.5, ease: EASE }}
-                    >
-                      <GarmentArt name={item.art} colors={item.colors} className="w-full h-full drop-shadow-md" />
-                    </motion.div>
-                    {/* sheen sweep on hover */}
-                    <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/45 to-transparent skew-x-12" />
+                  {/* Photograph */}
+                  <div className="relative h-56 bg-gray-100 overflow-hidden">
+                    <motion.img
+                      src={`${import.meta.env.BASE_URL}images/garments/${item.image}.webp`}
+                      alt={item.name}
+                      loading="lazy"
+                      width="800"
+                      height="560"
+                      className="w-full h-full object-cover"
+                      whileHover={reduce ? undefined : { scale: 1.07 }}
+                      transition={{ duration: 0.6, ease: EASE }}
+                    />
+                    {/* keeps the badge and card edge readable over any photo */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-secondary-900/25 to-transparent" />
+                    <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />
                   </div>
 
                   {/* Copy */}
