@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Waves, ArrowRight, Sparkles } from 'lucide-react'
 
 const heroImages = [
-  '/images/banner1.jpg',
-  '/images/banner2.jpg',
-  '/images/banner3.jpg',
-  '/images/banner4.jpg',
-  '/images/banner5.jpg',
+  `${import.meta.env.BASE_URL}images/banner1.jpg`,
+  `${import.meta.env.BASE_URL}images/banner2.jpg`,
+  `${import.meta.env.BASE_URL}images/banner3.jpg`,
+  `${import.meta.env.BASE_URL}images/banner4.jpg`,
+  `${import.meta.env.BASE_URL}images/banner5.jpg`,
 ]
 
 export default function Hero() {
